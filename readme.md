@@ -53,11 +53,64 @@ This project implements a **static web server** in Go, capable of serving files 
   - **MIME Type Mismatches**
 
 ### Check Test Coverage
-- Use the following command to verify test coverage:
+- Use the following command to verify test:
   ```bash
-  go test -cover
+  go test -v
   ```
   ![image](https://github.com/user-attachments/assets/3f3d6646-3970-4edc-89f7-739b04d2bfc3)
+
+# Examples
+
+---
+
+## Accessing a File
+1. Open your browser.
+2. Navigate to the following URL:
+   ```bash
+   http://localhost:80/index.html
+   ```
+
+## Handling a Missing File
+
+1. Open your browser.
+2. Navigate to the following URL:
+   ```bash
+   http://localhost:80/missing.html
+   ```
+## Challenges and Solutions
+
+### Challenge 1: MIME Type Mismatch
+- **Problem**: Modern browsers expect `text/javascript` for JavaScript files.
+- **Solution**: Update tests to recognize modern MIME types like `text/javascript`.
+
+### Challenge 2: Handling Missing Files
+- **Problem**: Missing files can disrupt server behavior, causing unhandled errors.
+- **Solution**: Use Go’s `http.FileServer` to handle `404 Not Found` errors gracefully and provide a consistent response.
+
+### Challenge 3: Ensuring Test Coverage
+- **Problem**: Validating all edge cases in a server can be difficult.
+- **Solution**: Simulate diverse HTTP requests and scenarios using Go’s `httptest` package to ensure comprehensive test coverage.
+
+## How to Run
+
+### Start the Server
+Run the following command to start the server:
+
+```bash
+go run main.go
+```
+## Run Tests
+
+Execute tests with the following command:
+
+```bash
+go test -v
+
+   
+   
+   
+
+  
 
   
 

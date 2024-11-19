@@ -57,6 +57,8 @@ This project implements a **static web server** in Go, capable of serving files 
   ```bash
   go test -cover
   ```
+  ![image](https://github.com/user-attachments/assets/3f3d6646-3970-4edc-89f7-739b04d2bfc3)
+
   
 
   

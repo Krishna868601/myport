@@ -40,4 +40,23 @@ This project implements a **static web server** in Go, capable of serving files 
 ### Dependency Management
 - Initialize Go modules for dependency management:
   ```bash
-  go mod init project_name
+  go mod init github.com/Krishna868601/webserver
+  ```
+  
+---
+
+## Testing Recommendations
+
+### Comprehensive Tests
+- Ensure tests cover edge cases, including:
+  - **Missing Files**
+  - **MIME Type Mismatches**
+
+### Check Test Coverage
+- Use the following command to verify test coverage:
+  ```bash
+  go test -cover
+  ```
+  
+
+  
